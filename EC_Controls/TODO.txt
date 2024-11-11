@@ -1,4 +1,4 @@
-﻿http://forum.lazarus.freepascal.org/index.php/topic,24521.30.html
+http://forum.lazarus.freepascal.org/index.php/topic,24521.30.html
 
 Remove DrawFocusRectNonThemed and SetFontParams from CanvasHelper
 
