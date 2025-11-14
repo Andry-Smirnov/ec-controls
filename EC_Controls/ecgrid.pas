@@ -2902,7 +2902,9 @@ const cLeftRight: array[Boolean] of SmallInt = (-1, 1);
 
   procedure SelectEditor(AReset: Boolean = False);
   begin
-    if not EditorMode and not Columns[Col].IsReadOnly and ((Shift*[ssModifier, ssAlt, ssMeta])=[]) then
+    if not EditorMode
+      and not Columns[Col].IsReadOnly
+      and ((Shift*[ssModifier, ssAlt{$if not(defined(darwin) or defined(macos) or defined(iphonesim))}, ssMeta{$IFEND}])=[]) then
       begin
         MakeCellFullyVisible(Col, Row, False);
         DoSelectEditor(Col, True, Key);
